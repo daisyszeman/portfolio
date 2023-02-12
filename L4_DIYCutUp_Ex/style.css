@@ -1,0 +1,59 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+main{
+  width:500px;
+}
+
+#gui-container{
+/*   margin: 0; */
+  position: absolute;
+  top: 70%;
+/*   left: 50%; */
+/*   -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+
+  
+/*   position: fixed; */
+/*   bottom: 50px;
+  left: 10px; */
+  z-index: 100;
+  width: 220px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+/*   background-color: rgb(255,255,255,0.7); */
+}
+
+.myButton:hover{
+  background-color:white;
+  color: #371bd3;
+}
+
+.myButton.inactive{
+  cursor:default;
+  background-color: lightgray;
+  border-color: lightgray;;
+  color: white;
+}
+
+.myButton{
+  background-color: #371bd3;
+  border: solid 1px #371bd3;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin:0 auto;
+  font-size: 16px;
+  min-width: 200px;
+  cursor: pointer;
+}
+

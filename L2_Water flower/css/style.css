@@ -1,0 +1,85 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+}
+
+
+canvas {
+  display: block;
+}
+
+body{
+  background: white;
+}
+
+main{
+  width: 600px;
+}
+
+#sketch-container{
+  width: 100%;
+}
+
+#gui-container{
+  /*   margin: 0; */
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 220px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+  
+  }
+  
+
+/*styled button */
+.button{
+  background-color:#000;
+  border: solid 3px #ffffff;
+  color: #fff;
+  border-radius: 10px;
+  
+  padding: 20px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin:0 auto;
+  font-size: 36px;
+  min-width: 200px;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: #ffffff;
+  border: solid 1px #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+.button.inactive{
+  cursor:default;
+  background-color: lightgray;
+  border-color: lightgray;
+  ;
+  color: white;
+}
+
+
+.divClass{
+  background-color: #fff;
+  border: solid 2px #fff;
+  border-radius: 10px;
+  color: #000;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin:0 auto;
+  font-size: 16px;
+  min-width: 200px;
+}
