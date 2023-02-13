@@ -193,8 +193,8 @@ function loadFile(index){
       console.log(data);
       files.push(data);
 
-      showText("Training text number " + (index+1));
-      showText(data.text);
+      //showText("Training text number " + (index+1));
+      //showText(data.text);
   
       loadbar ++;
       loadFile(index+1);
