@@ -24,7 +24,7 @@ main{
 #gui-container{
   /*   margin: 0; */
     position: absolute;
-    bottom: 10%;
+    bottom: 4%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
