@@ -65,6 +65,7 @@ function addGUI()
 }
 
 function draw() {
+  
   background(200);
 
   if(loadbar < jsonDocuments.length){
@@ -114,7 +115,7 @@ function draw() {
 function handleCanvasPressed(){
   //original text
   //show text in HTML
-  showText(displayText);
+  // showText(displayText);
   
   
   //spinner

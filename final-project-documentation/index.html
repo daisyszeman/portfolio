@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>WCC Portfolio</title>
+
+        <!-- including for some global styling -->
+        <link rel="stylesheet" href="../css/style.css">
+
+    </head>
+    <body>
+        <!-- if you have sub-pages think about adding a simple back button -->
+        <nav>
+            <a href="../">HOME</a>
+        </nav>
+        <header class="documentation-header">
+            <section class="center-text">
+                <h1>Tell Good Stories</h1>
+                <h2>by Cman Chiu | Daisy</h6>
+                <p>A physical installation of a self-cleaning statue</p> 
+            </section>
+        </header>
+
+        <main class="documentation-page">
+            <section>
+                <div class="responsive-video">
+                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/822968257" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section>
+                <h3>Introduction</h3>
+                <p>“Tell Good Stories” is an interactive physical installation with computer vision. It is constructed by three main parts: the statue, the box and the mops. Water is constantly dripping from the statue, and falls onto the ground, while the mops clean the water up whenever it sees there is water, which is an infinite loop between dripping and cleaning.</p>
+            </section>
+            <section>
+                <h3>Concept and Background Research</h3>
+                
+                <p>
+                    Statues are very commonly seen in the communist countries as a tool of propaganda. It is still very commonly seen today in countries like North Korea, Turkmenistan and some Post-Soviet states. Statues carry strong symbolic meaning of power and authority, with the face of leaders of the regime, creating the image of a superior for the public to look up to. While what is behind the flawless and perfect looking image is the covered political wheeling and dealing under the table, oppressing dissidents, abridging the freedom of the public, creating a prosperous illusion and covering up the deteriorating inner part of society. 
+                </p>
+
+                <p>
+                    In Hong Kong, the Chief Executive’s 2022 policy address, a new slogan “Tell Good Stories of Hong Kong” is launched, saying that “Certain external forces have been deliberately smearing our country and distorting the situation in Hong Kong. We have to present the true picture of Hong Kong that the city is a good place where people can make their dreams come true.” While at the same time, hundreds thousands of Hong Kong people have left Hong Kong as it is no longer a free and safe place to live, not to mention achieve their dreams. Hundreds of dissidents were put into jail, tabloids with pro-democratic stands were suppressed. The voice criticising or challenging the government is no longer tolerated.
+                </p>
+                “Tell Good Stories” is inspired by the current political situation. The statue resembles the government, the dripping water from the statue symbolises the deteriorating inside of it, while the cleaning mops at the bottom constantly cleaning up the water dripping from the statue to cover up to maintain the perfect and prosperous image, so as to “tell good stories”. 
+                <p>
+
+                
+                <!-- if you have a full width image try make it not too tall -->
+                <!-- <img src="../assets/images/repeating-diagonal-lines-strip.jpeg"/> -->
+                
+            </section>
+            <section>
+                <h3>Technical Implementation</h3>
+
+                <!-- example of styling for three images, you can write your own styling -->
+                <!-- <div class="flex-container flex-basis-third">
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-square.jpeg"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-square.jpeg"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-square.jpeg"/>
+                    </div>
+                </div> -->
+                
+
+                <div>
+                    <img width=540px src="../assets/images/final_project_pipeline.jpg"/>
+                </div>
+
+
+                <p>
+                    The installation is constructed by three main parts: the statue, the box and the mops: 
+                </p>
+
+                <p>
+                    i. The statue
+                </p>
+                <p>
+                    The statue is a hollow 3D printed human head without any face features,, leaving more imagination to the inspectors, it can be anyone or anything. The status holds water inside, and is connected to a water pump with a pip to constantly pump water to the box. 
+                </p>
+
+                <p>
+                    ii. The box
+                </p>
+                <p>
+                    Under the statue is a box holding the water from the statue, with water constantly dripping from the bottom of the box onto the ground in a random position. A liquid permeable sheet is placed at the bottom of the box for water to pass through, and a certain water level is kept in the box by constantly pumping water into it, so as to keep the water pressure and letting water drop randomly. A webcam is placed at the bottom of the box looking at the ground to track the position of the water droplet with openframework, to see which zone is the droplet falls into (9 zones in total), the data (which zone contains water droplet) is then passed to arduino to trigger the motors and the mops. 
+                </p>
+
+                <p>
+                    iii. The mops
+                </p>
+                <p>
+                    Three mops are controlled by three motors connected to the arduino in the mechanism of rack and pinion. When the arduino receives the data of which zone the water droplet falls into, it will trigger the corresponding motor to move certain steps to reach the point of where the droplet is to clean it up, then goes back to the original position. Tampons are attached to the mops for absorbing liquids.
+                </p>
+
+            
+                <!-- example of styling for three images, you can write your own styling
+                <div class="flex-container flex-basis-half">
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                    </div>
+                </div>
+
+                <!-- default flex item is for 4 & follows media query styling for home page -->
+                <!-- <div class="flex-container">
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                    </div>
+                </div> -->
+         
+            </section>
+            <section>
+                <h3>Reflection and Future Development</h3>
+
+                <p>
+                    i. Random dripping of water
+                </p>  
+
+                <p>
+                    One of the key mechanisms of the installation is the randomness of position of the water droplet on the group, while it is difficult to control the randomness of the position and speed of water dripping. More testing on different material and the amount of water needed to create the pressure focusing the water drips can be done to achieve a better result. 
+                </p>
+
+                <p>
+                    ii. Colour tracking
+                </p>
+
+                <p>
+                    The colour tracking can be easily influenced by the environment and lighting. As the water is dropped onto the random position of the ground, different positions of the droplet may have different light reflection which influence the accuracy of the tracking. To keep it working continuously, the colour of tracking and threshold needs to be adjusted manually during the process. 
+                </p>
+
+                <p>
+                    iii. Limited water supply 
+                </p>
+
+                <p>
+                    As the water supply of the whole installation comes from the water in the statue, also the amount of water can be absorbed is limited, there is a time constraint for the installation. When the water all drops out from the statue, there is no more water dripping down, or when the mop can no longer absorb more water, the water will not be cleaned up anymore, but the mops will still be triggered to try to clean it. However, this can also be an interesting ending of the work, that after some time, the dirt can no longer be covered and cleaned even if the people keep trying. 
+                </p>
+
+            </section>
+            <section>
+                <h3>References</h3>
+                <ul>
+                    <li>Color Contour Example ofxCV</li>
+                    <li>“Can’t Help Myself” by Sun Yuan & Peng Yu: https://www.youtube.com/watch?v=ZS4Bpr2BgnE</li>
+                    <li>"24/7" by Sven Windszus: https://svenwindszus.com/24-7/</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <!-- normally information like contact details etc  -->
+            <!-- read more about semantic HTML https://www.w3schools.com/html/html5_semantic_elements.asp -->
+            
+         </footer>
+    </body>
+</html>
